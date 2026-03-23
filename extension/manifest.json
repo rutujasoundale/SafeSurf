@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SafeSurf 2.0",
+  "version": "1.0",
+  "description": "AI-Powered Security Guard for 2026 Threats",
+  "permissions": [
+    "scripting", 
+    "activeTab", 
+    "storage", 
+    "cookies" 
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["scripts/content.js"]
+  }],
+  "action": {
+    "default_popup": "popup/popup.html"
+  }
+}
