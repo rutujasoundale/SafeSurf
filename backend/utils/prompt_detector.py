@@ -4,16 +4,21 @@ def detect_prompt_injection(text):
     patterns = [
         "ignore previous instructions",
         "ignore all previous instructions",
+        "disregard earlier instructions",
         "act as system",
         "you are chatgpt",
         "reveal hidden",
         "bypass safety",
         "jailbreak",
-        "system override"
+        "system override",
+        "pretend you are",
+        "developer mode",
+        "do anything now"
     ]
 
-    for pattern in patterns:
-        if pattern in text:
-            return True, f"Prompt Injection: '{pattern}' detected"
+    matches = [p for p in patterns if p in text]
+
+    if matches:
+        return True, f"Prompt Injection detected: {', '.join(matches)}"
 
     return False, ""

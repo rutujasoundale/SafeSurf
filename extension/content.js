@@ -14,25 +14,20 @@ const capturePageData = () => {
 
         hasPasswordField: !!document.querySelector('input[type="password"]'),
 
-        links: Array.from(document.querySelectorAll("a")).map(a => ({
-            text: a.innerText,
-            href: a.href
-        })),
-
         scripts: Array.from(document.scripts)
             .map(s => s.src)
-            .filter(src => src && src.startsWith("http")),
-
-        timestamp: new Date().toISOString()
+            .filter(src => src && src.startsWith("http"))
     };
 };
 
-// 🔥 ALWAYS RUN (no session block during debug)
-const data = capturePageData();
+// ✅ Prevent multiple scans
+const sessionKey = `safesurf_${window.location.href}`;
 
-chrome.runtime.sendMessage({
-    type: "SCAN_PAGE",
-    payload: data
-}, (response) => {
-    console.log("📩 Background response:", response);
-});
+if (!sessionStorage.getItem(sessionKey)) {
+    sessionStorage.setItem(sessionKey, "true");
+
+    chrome.runtime.sendMessage({
+        type: "SCAN_PAGE",
+        payload: capturePageData()
+    });
+}
