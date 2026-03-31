@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.env
+venv/
+env/
+
+# Flask
+instance/
+.webassets-cache
+
+# Node (if used later)
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# API Keys / Secrets
+.env
+config.py
+
+# Build files
+dist/
+build/
+
+# Chrome Extension
+*.pem
