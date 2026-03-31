@@ -50,65 +50,87 @@ If a threat is detected, SafeSurf:
 
 ---
 
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+git clone https://github.com/rutujasoundale/SafeSurf.git
+cd SafeSurf
+
+---
+
+### 2️⃣ Backend Setup (Flask API)
+
+cd backend
+pip install -r requirements.txt
+python app.py
+
+Make sure backend runs on:
+http://127.0.0.1:5000
+
+---
+
+### 3️⃣ Add API Key (Gemini)
+
+GEMINI_API_KEY=your_api_key_here
+
+---
+
+### 4️⃣ Load Chrome Extension
+
+1. Open Chrome → chrome://extensions/
+2. Enable Developer Mode
+3. Click Load unpacked
+4. Select frontend folder
+
+---
+
+### 5️⃣ Run the Project
+
+- Start backend
+- Open any website
+- SafeSurf will analyze pages
+- Warning overlay appears on threats
+
+---
+
 ## ⚠️ Challenges we ran into
 
 - Handling Chrome extension messaging correctly  
 - Managing async script injection  
 - Avoiding excessive API calls  
-- Designing accurate phishing detection rules 
-- Handling API rate limits (Gemini quota issues) beacause there is imit of 20 api calls per session
+- Designing accurate phishing detection rules  
+- Handling API rate limits (Gemini quota ~20 calls/session)
 
 ---
 
 ## 🏆 Accomplishments 
 
-- Built a **real-time browser security system**
-- Integrated AI + rule-based hybrid detection
-- Created a clean and interactive warning UI
-- Successfully detected phishing-style websites
-- Designed a modular and scalable pipeline
+- Built a real-time browser security system
+- Integrated AI + rule-based detection
+- Created interactive warning UI
+- Detected phishing-style websites
+- Designed scalable pipeline
 
 ---
 
 ## 📚 What we learned
 
-- Chrome extension architecture (content/background scripts)
-- Real-world cybersecurity threats
-- API integration and rate limiting
-- Designing detection systems with low false positives
-- Importance of UX in security tools
-
----
+- Chrome extension architecture
+- Cybersecurity threat patterns
+- API rate limiting
+- Detection system design
+- UX in security tools
 
 ---
 
 ## 🤝 Contributing
 
-I welcome contributions! 🚀  
-
-### To get started:
-1. Fork the repo  
-2. Create a new branch  
-3. Make your changes  
-4. Submit a Pull Request  
-Where you can contibute I am trying to add a cookie management were users will be able to track the cookies how many websites
-are using what tye of data of user(can be done with javascript)- 🍪 Cookie/session hijacking detection  
-
-Tasks:
-- Detect document.cookie usage
-- Flag third-party cookies
-- Send data to backend
-You can also raise issues!You can also try to enhance UI or any idea you have regarding responses or threats.
-If you have interest in cybersecurity You can also try to work on Zero day attacks.- 🛡️ Zero-day attack heuristics  
-
-
-Check issues labeled **`good first issue`** to start.
--
-
+- Add cookie tracking system
+- Improve UI/UX
+- Enhance detection logic
+- Work on zero-day heuristics
 
 ---
 
 ## 🔗 GitHub Repo
- https://github.com/rutujasoundale/SafeSurf
-
----
+https://github.com/rutujasoundale/SafeSurf
