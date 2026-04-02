@@ -22,6 +22,10 @@ If a threat is detected, SafeSurf:
 
 ---
 
+## 🎥 Demo Video
+
+[▶️ Watch Demo](demo/video5445131621.mp4)
+
 ## 🏗️ How we built it
 
 ### 🔹 Frontend (Chrome Extension)
