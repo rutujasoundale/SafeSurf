@@ -3,7 +3,7 @@ from flask_cors import CORS
 
 from utils.rules import perform_rule_check
 from utils.gemini_ai import analyze_with_gemini
-from utils.leak_detecor import scan_for_leaks   # ✅ FIXED IMPORT
+from utils.leak_detecor import scan_for_leaks   
 from utils.prompt_detector import detect_prompt_injection
 
 app = Flask(__name__)
