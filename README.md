@@ -59,44 +59,45 @@ If a threat is detected, SafeSurf:
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Clone the Repository
+```
 git clone https://github.com/rutujasoundale/SafeSurf.git
 cd SafeSurf
-
+```
 ---
 
 ### 2️⃣ Backend Setup (Flask API)
-
+```
 cd backend
 pip install -r requirements.txt
 python app.py
-
+```
 Make sure backend runs on:
 http://127.0.0.1:5000
 
 ---
 
 ### 3️⃣ Add API Key (Gemini)
-
+```
 GEMINI_API_KEY=your_api_key_here
-
+```
 ---
 
 ### 4️⃣ Load Chrome Extension
-
+```
 1. Open Chrome → chrome://extensions/
 2. Enable Developer Mode
 3. Click Load unpacked
 4. Select frontend folder
-
+```
 ---
 
 ### 5️⃣ Run the Project
-
+```
 - Start backend
 - Open any website
 - SafeSurf will analyze pages
 - Warning overlay appears on threats
-
+```
 ---
 
 ## ⚠️ Challenges we ran into
