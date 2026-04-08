@@ -25,7 +25,7 @@ If a threat is detected, SafeSurf:
 
 ## 🎥 Demo Video
 
-[![Watch Demo](https://img.youtube.com/vi/YL0KcmhIUwM/0.jpg)](https://www.youtube.com/watch?v=YL0KcmhIUwM)
+[![Watch Demo](demo/video5445131621.mp4)
 
 
 ## 🏗️ How we built it
